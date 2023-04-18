@@ -3,7 +3,7 @@ let handler  = async (m, { conn, text }) => {
 try {
 let res = await fetch('https://api.thedogapi.com/v1/images/search')
 let img = await res.json()
-let caption = `_©The Mystic - Bot_`.trim()
+let caption = `_©The 𝙼𝚊𝚔𝚊𝚗𝚊𝚔𝚢 - Bot_`.trim()
 conn.sendFile(m.chat, img[0].url, 'dog.jpg', caption, m)
 } catch {
 throw '*Error!*'

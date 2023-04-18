@@ -4,7 +4,7 @@ try {
 let res = await fetch('https://api.thecatapi.com/v1/images/search')
 let img = await res.json()
 let caption = `
-_©The Mystic - Bot_
+_©The 𝙼𝚊𝚔𝚊𝚗𝚊𝚔𝚢 - Bot_
 `.trim()
 conn.sendFile(m.chat, img[0].url, 'cat.jpg', caption, m)
 } catch (e) {
