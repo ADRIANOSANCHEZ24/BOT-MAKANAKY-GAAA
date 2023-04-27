@@ -21,7 +21,7 @@ if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽𝙰 𝙿𝙴𝚃�
 try {
 let chgptdb = global.chatgpt.data.users[m.sender];
 chgptdb.push({ role: 'user', content: text });
-const config = { method: 'post', url: 'https://api.openai.com/v1/chat/completions', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + global.openai_key }, data: JSON.stringify({ 'model': 'gpt-3.5-turbo', 'messages': [{ role: 'system', content: 'Actuaras como un Bot de WhatsApp el cual fue creado por BrunoSobrino, tu seras The Mystic - Bot' }, ...chgptdb ]})}
+const config = { method: 'post', url: 'https://api.openai.com/v1/chat/completions', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + global.openai_key }, data: JSON.stringify({ 'model': 'gpt-3.5-turbo', 'messages': [{ role: 'system', content: 'Actuaras como un Bot de WhatsApp el cual fue creado por Aldo Sánchez, tu seras The Makanaky Bot' }, ...chgptdb ]})}
 let response = await axios(config);
 chgptdb.push({ role: 'assistant', content: response.data.choices[0].message.content }) 
 m.reply(response.data.choices[0].message.content)
